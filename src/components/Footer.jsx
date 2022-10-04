@@ -1,8 +1,10 @@
 import { Facebook, Instagram, LinkedIn, MailOutline, Phone, Room, Twitter } from "@material-ui/icons"
 import styled from "styled-components"
+import { Mobile } from "../responsive";
 
 const Container = styled.div`
 display: flex;
+${Mobile({flexDirection: "column"})}
 `
 const Left = styled.div`
     flex: 1;
@@ -35,7 +37,7 @@ const Left = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
-    
+    ${Mobile({backgroundColor: "#fff8f8"})}
     `;
 const Title = styled.h3`
     margin-bottom: 30px;
@@ -54,6 +56,7 @@ display:flex;
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+  
     `;
 const ContactItem = styled.div`
 margin-bottom: 20px;

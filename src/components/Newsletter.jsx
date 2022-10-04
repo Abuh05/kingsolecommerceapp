@@ -1,5 +1,6 @@
 import { SendOutlined } from "@material-ui/icons"
 import styled from "styled-components"
+import { Mobile } from "../responsive";
 
 
 const Container = styled.div`
@@ -18,6 +19,7 @@ const Description = styled.div`
    font-size: 24px;
    font-weight: 300;
    margin-bottom: 20px; 
+   ${Mobile({textAlign: "center"})}
 `;
 const InputContainer = styled.div`
     width: 50%;
@@ -26,6 +28,7 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
     border: 1px solid lightgray;
+    ${Mobile({width: "80%"})}
 `
 const Input = styled.input`
     border: none;
@@ -47,7 +50,7 @@ const Newsletter = () => {
         <Title>Newsletter</Title>
         <Description>Get timely update from your favorite products</Description>
         <InputContainer>
-            <Input placeholdr="Your email" />
+            <Input placeholder="Your email" />
             <Button >
                 <SendOutlined />
             </Button>
